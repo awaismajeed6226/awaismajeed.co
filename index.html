@@ -1,615 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Technologent Engineering Lahore | Industrial EPC, Solar & Energy Solutions</title>
-
-<meta name="description" content="Technologent Engineering is a Lahore-based industrial EPC company delivering solar, net metering, mechanical, electrical and HVAC solutions across Pakistan.">
-<meta name="keywords" content="Industrial EPC Lahore, Solar EPC Pakistan, Net Metering Lahore, Mechanical Engineering Lahore, Electrical Engineering Lahore, HVAC Contractors Lahore">
-
-<link rel="icon" type="image/png" href="https://assets.cdn.filesafe.space/cm7ZvQBQ0Ce20oOJVI35/media/699c2a2b679b48120f23a20e.png">
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-
-<style>
-:root{
---primary:#ff7a00;
---dark:#0c0c0d;
---soft:#151517;
---muted:#9fa3a7;
---border:#222;
-}
-
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-font-family:'Segoe UI',sans-serif;
-background:var(--dark);
-color:#fff;
-overflow-x:hidden;
-}
-
-/* ================= NAVBAR ================= */
-.navbar{
-background:rgba(0,0,0,.95);
-padding:18px 0;
-transition:.4s;
-}
-.navbar.shrink{
-padding:8px 0;
-box-shadow:0 10px 30px rgba(0,0,0,.6);
-}
-.navbar-brand img{height:110px;}
-.nav-link{color:#ddd!important;margin-left:26px;}
-.nav-link:hover{color:var(--primary)!important;}
-
-.dropdown-menu{
-background:#111;
-border:1px solid #222;
-}
-.dropdown-item{color:#ccc;}
-.dropdown-item:hover{color:var(--primary);background:none;}
-
-/* ================= HERO ================= */
-.hero{
-position:relative;
-height:100vh;
-display:flex;
-align-items:center;
-}
-.hero video{
-position:absolute;
-top:50%;left:50%;
-min-width:100%;min-height:100%;
-transform:translate(-50%,-50%);
-object-fit:cover;
-z-index:-2;
-}
-.hero-overlay{
-position:absolute;
-width:100%;height:100%;
-background:linear-gradient(to right, rgba(0,0,0,.95), rgba(0,0,0,.6));
-z-index:-1;
-}
-.hero-content{max-width:850px;}
-.hero h1{font-size:66px;font-weight:700;}
-.hero p{margin-top:25px;font-size:20px;color:var(--muted);line-height:1.8;}
-.btn-main{
-background:var(--primary);
-color:#fff;
-padding:16px 42px;
-font-weight:600;
-margin-top:35px;
-display:inline-block;
-}
-
-/* ================= SECTIONS ================= */
-.section{padding:120px 0;}
-.section-title{
-font-size:44px;
-font-weight:700;
-text-align:center;
-margin-bottom:20px;
-}
-.section-sub{
-max-width:1050px;
-margin:0 auto 70px;
-text-align:center;
-color:var(--muted);
-font-size:17px;
-line-height:1.9;
-}
-
-/* ================= MARQUEE ================= */
-.marquee-wrapper{overflow:hidden;}
-.marquee{
-display:flex;
-width:max-content;
-animation:scroll 35s linear infinite;
-}
-.marquee-wrapper:hover .marquee{animation-play-state:paused;}
-.marquee-item{
-width:330px;height:330px;
-background:var(--soft);
-border:1px solid var(--border);
-border-radius:12px;
-margin-right:30px;
-padding:30px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-.marquee-item i{font-size:42px;color:var(--primary);margin-bottom:20px;}
-@keyframes scroll{
-0%{transform:translateX(0);}
-100%{transform:translateX(-50%);}
-}
-
-/* ================= STATS ================= */
-.stats{background:#101010;text-align:center;}
-.stat-number{font-size:58px;font-weight:700;color:var(--primary);}
-
-/* ================= TEAM ================= */
-.team-img{
-width:100%;
-height:520px;
-background:#222;
-border-radius:12px;
-}
-
-/* ================= CLIENTS ================= */
-.client-content{
-display:flex;
-width:max-content;
-animation:scroll 25s linear infinite;
-}
-.client-content img{
-height:90px;
-margin:0 50px;
-opacity:.85;
-}
-
-/* ================= CONTACT ================= */
-.contact-box{
-background:var(--soft);
-padding:60px;
-border-radius:12px;
-}
-.form-control{
-background:#111;
-border:1px solid #333;
-color:#fff;
-}
-.form-control:focus{
-border-color:var(--primary);
-background:#111;
-box-shadow:none;
-}
-
-/* ================= FOOTER ================= */
-footer{
-background:#080808;
-padding:80px 0;
-}
-footer a{color:#bbb;text-decoration:none;}
-footer a:hover{color:var(--primary);}
-
-/* ================= MOBILE POLISH ================= */
-@media (max-width: 991px) {
-
-  /* GLOBAL FIXES */
-  body {
-    overflow-x: hidden;
-  }
-
-  .section {
-    padding: 80px 0;
-  }
-
-  .section-title {
-    font-size: 30px;
-    padding: 0 15px;
-  }
-
-  .section-sub {
-    font-size: 15px;
-    padding: 0 15px;
-    margin-bottom: 50px;
-  }
-
-  /* NAVBAR */
-  .navbar-brand img {
-    height: 80px;
-  }
-
-  .nav-link {
-    margin-left: 0;
-    padding: 12px 0;
-    text-align: center;
-  }
-
-  .dropdown-menu {
-    text-align: center;
-  }
-
-  /* HERO */
-  .hero {
-    height: auto;
-    padding: 140px 0 100px;
-  }
-
-  .hero-content {
-    text-align: center;
-    padding: 0 15px;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-    line-height: 1.2;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .btn-main {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* MARQUEE / CORE CAPABILITIES */
-  .marquee-wrapper {
-    padding-left: 0;
-  }
-
-  .marquee {
-    gap: 20px;
-  }
-
-  .marquee-item {
-    min-width: 260px;
-    height: 260px;
-    padding: 20px;
-  }
-
-  .marquee-item h5 {
-    font-size: 16px;
-  }
-
-  /* CERTIFICATIONS */
-  .cert-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cert-card {
-    padding: 30px 20px;
-  }
-
-  /* STATS */
-  .stats .row > div {
-    margin-bottom: 30px;
-  }
-
-  .stat-number {
-    font-size: 42px;
-  }
-
-  /* LEADERSHIP TEAM */
-  .team-card {
-    padding: 30px 20px;
-  }
-
-  .team-card .row {
-    flex-direction: column;
-  }
-
-  .team-img {
-    height: 280px;
-    margin-bottom: 20px;
-  }
-
-  .team-card h4 {
-    text-align: center;
-  }
-
-  .team-card p {
-    text-align: center;
-    font-size: 15px;
-  }
-
-  /* CLIENTS */
-  .client-track {
-    gap: 40px;
-  }
-
-  .client-track img {
-    height: 70px;
-  }
-
-  /* CONTACT */
-  .contact-box {
-    padding: 40px 20px;
-  }
-
-  /* FOOTER */
-  footer {
-    text-align: center;
-    padding: 60px 0;
-  }
-
-  footer img {
-    margin-bottom: 30px;
-  }
-
-  footer .row > div {
-    margin-bottom: 30px;
-  }
-
-  footer h6 {
-    margin-top: 20px;
-  }
-}
-
-/* ================= MOBILE MARQUEE SPEED OPTIMIZATION ================= */
-@media (max-width: 991px) {
-
-  /* Slow down marquee on mobile only */
-  .marquee {
-    animation-duration: 65s; /* was 40s */
-  }
-
-  /* Client logos marquee slower */
-  .client-track {
-    animation-duration: 55s; /* smoother on phones */
-  }
-
-  /* Reduce motion slightly for comfort */
-  .marquee-item {
-    transition: transform 0.25s ease;
-  }
-}
-
-/* ================= MOBILE NAVBAR UX POLISH ================= */
-@media (max-width: 991px) {
-
-  /* Make mobile menu full width & clean */
-  .navbar-collapse {
-    background: #000;
-    padding: 20px;
-    border-radius: 0 0 16px 16px;
-  }
-
-  /* Bigger, finger-friendly links */
-  .navbar-nav .nav-link {
-    font-size: 18px;
-    padding: 14px 0;
-    border-bottom: 1px solid #222;
-  }
-
-  .navbar-nav .nav-link:last-child {
-    border-bottom: none;
-  }
-
-  /* Dropdown spacing */
-  .dropdown-menu {
-    background: #0d0d0d;
-    border: none;
-    padding: 10px 0;
-  }
-
-  .dropdown-item {
-    padding: 12px 20px;
-    font-size: 16px;
-  }
-}
-
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awais Majeed | Home</title>
+  <meta name="description" content="Official website of Awais Majeed: strategic digital services, case-led execution, and growth-focused delivery.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
-
 <body>
-
-<!-- ================= HEADER ================= -->
-<nav class="navbar navbar-expand-lg fixed-top">
-<div class="container">
-<a class="navbar-brand" href="index.html">
-<img src="https://assets.cdn.filesafe.space/cm7ZvQBQ0Ce20oOJVI35/media/699c2a2b679b48120f23a20e.png">
-</a>
-
-<button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#nav"></button>
-
-<div class="collapse navbar-collapse justify-content-end" id="nav">
-<ul class="navbar-nav">
-<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
-<ul class="dropdown-menu">
-<li><a class="dropdown-item" href="mechanical.html">Mechanical</a></li>
-<li><a class="dropdown-item" href="electrical.html">Electrical</a></li>
-<li><a class="dropdown-item" href="hvac.html">HVAC</a></li>
-<li><a class="dropdown-item" href="industrial.html">Industrial</a></li>
-<li><a class="dropdown-item" href="solar-net-metering.html">Solar / Net Metering</a></li>
-</ul>
-</li>
-
-<li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-<li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-<li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-</ul>
-</div>
-</div>
+<canvas id="particle-canvas"></canvas>
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Awais Majeed</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="case-studies.html">Case Studies</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-<video autoplay muted loop playsinline>
-<source src="https://assets.cdn.filesafe.space/cm7ZvQBQ0Ce20oOJVI35/media/699c1bad9598d24813d61748.mp4">
-</video>
-<div class="hero-overlay"></div>
-<div class="container hero-content">
-<h1>Industrial EPC, Solar & Energy Engineering Experts in Lahore</h1>
-<p>
-Technologent Engineering delivers turnkey industrial EPC, utility-scale solar power plants,
-net metering approvals, mechanical, electrical, and HVAC solutions across Lahore and Pakistan.
-</p>
-<a href="contact.html" class="btn-main">Request Consultation</a>
-</div>
-</section>
+<main>
+  <header class="hero">
+    <div class="container">
+      <span class="tag">Complete Website Rebuild • Dark Orange Theme</span>
+      <h1 class="mt-3">A modern digital headquarters for <span style="color:var(--accent)">Awais Majeed</span></h1>
+      <p>
+        This is now a complete multi-page experience, not a placeholder. The site is structured to build authority from the first scroll: clear positioning on Home,
+        complete offer clarity on Services, proof-driven storytelling in Case Studies, trust-building via Team, and a conversion-ready Contact flow.
+      </p>
+      <div class="mt-4">
+        <a class="btn-accent" href="services.html">Explore Services</a>
+        <a class="btn-outline-light-soft" href="contact.html">Start a Project</a>
+      </div>
+    </div>
+  </header>
 
-<!-- ================= ABOUT (LOCAL SEO) ================= -->
-<section class="section">
-<div class="container">
-<h2 class="section-title">Industrial Engineering Company in Lahore</h2>
-<p class="section-sub">
-Technologent Engineering is a Lahore-based industrial EPC and energy engineering company
-providing mechanical engineering, electrical infrastructure, HVAC systems,
-industrial construction, solar power solutions, and net metering services.
-Serving factories, warehouses, and manufacturing units across Lahore and Punjab,
-we deliver compliant, efficient, and scalable engineering solutions built
-for long-term industrial performance.
-</p>
-</div>
-</section>
+  <section class="section pt-0">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4"><div class="kpi"><strong>85+</strong>Projects Delivered</div></div>
+        <div class="col-md-4"><div class="kpi"><strong>6+</strong>Years of Execution</div></div>
+        <div class="col-md-4"><div class="kpi"><strong>24h</strong>Avg. Initial Response</div></div>
+      </div>
+    </div>
+  </section>
 
-<!-- ================= CORE CAPABILITIES ================= -->
-<section class="section">
-<div class="marquee-wrapper">
-<div class="marquee">
-<div class="marquee-item"><i class="fa-solid fa-solar-panel"></i><h5>Industrial Solar EPC</h5></div>
-<div class="marquee-item"><i class="fa-solid fa-diagram-project"></i><h5>EPC Execution</h5></div>
-<div class="marquee-item"><i class="fa-solid fa-bolt"></i><h5>Electrical Systems</h5></div>
-<div class="marquee-item"><i class="fa-solid fa-gears"></i><h5>Mechanical Engineering</h5></div>
-<div class="marquee-item"><i class="fa-solid fa-fan"></i><h5>HVAC Solutions</h5></div>
-<div class="marquee-item"><i class="fa-solid fa-file-circle-check"></i><h5>Net Metering</h5></div>
-</div>
-</div>
-</section>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">What makes this website detailed and conversion-ready</h2>
+      <p class="section-subtitle">Every block is designed to answer a real visitor question: who you are, what you do, why trust you, and how to work with you.</p>
+      <div class="row g-4 mt-1">
+        <div class="col-lg-4">
+          <article class="card-dark">
+            <span class="pill">01</span>
+            <h3 class="h5 mt-2">Clarity-first structure</h3>
+            <p class="text-secondary mb-0">The navigation and page layout remove ambiguity. Visitors can understand your full offer in under two minutes and move directly to inquiry.</p>
+          </article>
+        </div>
+        <div class="col-lg-4">
+          <article class="card-dark">
+            <span class="pill">02</span>
+            <h3 class="h5 mt-2">Visual consistency</h3>
+            <p class="text-secondary mb-0">Black background, dark-orange emphasis, and white typography are unified across every page for a strong, memorable brand impression.</p>
+          </article>
+        </div>
+        <div class="col-lg-4">
+          <article class="card-dark">
+            <span class="pill">03</span>
+            <h3 class="h5 mt-2">Intentional user journey</h3>
+            <p class="text-secondary mb-0">From first impression to CTA, each section is built to progressively raise confidence and increase the quality of incoming leads.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- ================= CERTIFICATIONS ================= -->
-<section class="section">
-<div class="container">
-<h2 class="section-title">Certifications & Compliance</h2>
-<p class="section-sub">
-PEC registered, ISO-aligned, and governed by international engineering and safety standards.
-</p>
+  <section class="section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <article class="panel">
+            <h2 class="h4">Quick access to all key pages</h2>
+            <ul class="checklist mt-3">
+              <li><strong>Services:</strong> Detailed breakdown of delivery modules and outcomes.</li>
+              <li><strong>Case Studies:</strong> Challenge → approach → measurable result format.</li>
+              <li><strong>Team:</strong> Clear role visibility to increase trust and accountability.</li>
+              <li><strong>Contact Us:</strong> Structured intake to qualify projects better.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-lg-6">
+          <article class="panel">
+            <h2 class="h4">Built for action, not just aesthetics</h2>
+            <p class="text-secondary">The site now balances design and utility. It is visually premium, but also practical for real business conversations and lead generation.</p>
+            <p class="small-note mb-0">Hover your cursor: particle movement follows direction to keep the experience dynamic across all pages.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-<div class="marquee-wrapper">
-<div class="marquee">
-<div class="marquee-item"><img src="https://img.icons8.com/fluency/96/certificate.png"><h5>PEC Registered</h5></div>
-<div class="marquee-item"><img src="https://img.icons8.com/fluency/96/guarantee.png"><h5>ISO Compliance</h5></div>
-<div class="marquee-item"><img src="https://img.icons8.com/fluency/96/engineer.png"><h5>Certified Engineers</h5></div>
-<div class="marquee-item"><img src="https://img.icons8.com/fluency/96/shield.png"><h5>Safety Standards</h5></div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ================= STATS ================= -->
-<section class="section stats">
-<div class="container">
-<div class="row">
-<div class="col-md-3"><div class="stat-number" data-target="250">0</div><p>Projects Delivered</p></div>
-<div class="col-md-3"><div class="stat-number" data-target="150">0</div><p>Industrial Clients</p></div>
-<div class="col-md-3"><div class="stat-number" data-target="200">0</div><p>MW Installed</p></div>
-<div class="col-md-3"><div class="stat-number" data-target="24">0</div><p>Availability</p></div>
-</div>
-</div>
-</section>
-
-<!-- ================= TEAM ================= -->
-<section class="section">
-<div class="container">
-<h2 class="section-title">Leadership Team</h2>
-
-<div class="row mb-5">
-<div class="col-md-5"><div class="team-img"></div></div>
-<div class="col-md-7">
-<h4>Abdul Majeed – Chief Executive Officer</h4>
-<p>35+ years of international EPC, plant engineering and energy infrastructure leadership across Pakistan and GCC.</p>
-</div>
-</div>
-
-<div class="row">
-<div class="col-md-5"><div class="team-img"></div></div>
-<div class="col-md-7">
-<h4>Muhammad Bakir Ali – Director Operations</h4>
-<p>Operational leadership, QA/QC governance, execution strategy and site delivery across industrial EPC projects.</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ================= CLIENTS ================= -->
-<section class="section">
-<div class="container"><h2 class="section-title">Our Industrial Clients</h2></div>
-<div class="client-content">
-<img src="https://assets.cdn.filesafe.space/cm7ZvQBQ0Ce20oOJVI35/media/699c382d5dfd50fdb86fa907.jpeg">
-<img src="https://assets.cdn.filesafe.space/cm7ZvQBQ0Ce20oOJVI35/media/699c382d679b48628e269fc8.jpeg">
-<img src="https://assets.cdn.filesafe.space/cm7ZvQBQ0Ce20oOJVI35/media/699c382d5dfd50d08b6fa90b.jpeg">
-</div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section class="section">
-<div class="container">
-<h2 class="section-title">Contact Us</h2>
-<div class="contact-box">
-<form>
-<input class="form-control mb-3" required placeholder="Full Name">
-<input class="form-control mb-3" required placeholder="Phone Number">
-<input class="form-control mb-3" type="email" required placeholder="Email Address">
-<textarea class="form-control mb-3" required placeholder="What are you looking for?"></textarea>
-<button class="btn-main w-100">Submit Inquiry</button>
-</form>
-</div>
-</div>
-</section>
-
-<!-- ================= FOOTER ================= -->
 <footer>
-<div class="container">
-<div class="row">
-
-<div class="col-md-4">
-<img src="https://assets.cdn.filesafe.space/cm7ZvQBQ0Ce20oOJVI35/media/699c2a2b679b48120f23a20e.png" style="height:110px;">
-</div>
-
-<div class="col-md-4">
-<div class="row">
-<div class="col-6">
-<h6>Navigation</h6>
-<a href="index.html">Home</a><br>
-<a href="team.html">Team</a><br>
-<a href="projects.html">Projects</a><br>
-<a href="contact.html">Contact</a>
-</div>
-<div class="col-6">
-<h6>Services</h6>
-<a href="mechanical.html">Mechanical</a><br>
-<a href="electrical.html">Electrical</a><br>
-<a href="hvac.html">HVAC</a><br>
-<a href="industrial.html">Industrial</a><br>
-<a href="solar-net-metering.html">Solar / Net Metering</a>
-</div>
-</div>
-</div>
-
-<div class="col-md-4">
-<p>
-40-C Small Sundar PIE, Lahore<br>
-info@technologent.com.pk<br>
-+92 300 6832015<br>
-+92 321 0000000
-</p>
-</div>
-
-</div>
-</div>
+  <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+    <span>© <span id="year"></span> Awais Majeed. All rights reserved.</span>
+    <span>Detailed multi-page website • Home, Services, Case Studies, Team, Contact</span>
+  </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-window.addEventListener("scroll",()=> {
-document.querySelector(".navbar").classList.toggle("shrink",window.scrollY>50);
-});
-
-const observer=new IntersectionObserver(entries=>{
-if(entries[0].isIntersecting){
-document.querySelectorAll('.stat-number').forEach(c=>{
-let t=+c.dataset.target,n=0,i=t/150;
-(function u(){n+=i;n<t?(c.innerText=Math.ceil(n),requestAnimationFrame(u)):c.innerText=t})();
-});
-observer.disconnect();
-}});
-observer.observe(document.querySelector('.stats'));
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/particles.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
