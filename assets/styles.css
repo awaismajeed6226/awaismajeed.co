@@ -1,13 +1,13 @@
 :root {
-  --bg: #050505;
-  --bg-elev: #101010;
-  --bg-soft: #181818;
-  --text: #ffffff;
-  --muted: #b9b9b9;
-  --accent: #ff7a00;
-  --accent-strong: #d95f00;
-  --border: #2a2a2a;
-  --success: #54d38a;
+  --bg: #ffffff;
+  --bg-elev: #f5f8ff;
+  --bg-soft: #eaf0ff;
+  --text: #0f1b3d;
+  --muted: #4a5d8a;
+  --accent: #132f6b;
+  --accent-strong: #0a1d49;
+  --border: #cdd9f4;
+  --success: #1e8f5a;
 }
 
 * { box-sizing: border-box; }
@@ -19,7 +19,7 @@ body {
   font-family: "Inter", "Segoe UI", system-ui, sans-serif;
   line-height: 1.65;
   color: var(--text);
-  background: radial-gradient(circle at 85% 5%, rgba(255,122,0,.14), transparent 32%), var(--bg);
+  background: radial-gradient(circle at 90% 2%, rgba(19, 47, 107, 0.12), transparent 32%), var(--bg);
   overflow-x: hidden;
 }
 
@@ -33,19 +33,19 @@ body {
 }
 
 .navbar {
-  background: rgba(0,0,0,.86);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(7px);
   border-bottom: 1px solid var(--border);
 }
 
 .navbar-brand {
-  color: #fff;
+  color: var(--accent);
   font-weight: 700;
   letter-spacing: .35px;
 }
 
 .nav-link {
-  color: #d6d6d6 !important;
+  color: #2b3f70 !important;
   margin-left: .75rem;
   font-weight: 500;
 }
@@ -75,9 +75,9 @@ main {
 
 .tag {
   display: inline-block;
-  border: 1px solid #4a2a10;
-  color: #ffc89d;
-  background: rgba(255,122,0,.14);
+  border: 1px solid #bccbf0;
+  color: var(--accent);
+  background: rgba(19, 47, 107, 0.08);
   border-radius: 99px;
   padding: .35rem .85rem;
   font-size: .86rem;
@@ -110,8 +110,9 @@ main {
 .btn-accent:hover { transform: translateY(-2px); }
 
 .btn-outline-light-soft {
-  border: 1px solid #4e4e4e;
-  color: #fff;
+  border: 1px solid #a5b7e6;
+  color: var(--accent);
+  background: #fff;
   border-radius: 12px;
   padding: .78rem 1.28rem;
   text-decoration: none;
@@ -121,12 +122,12 @@ main {
 
 .panel,
 .card-dark {
-  background: linear-gradient(180deg, #191919, #101010);
+  background: linear-gradient(180deg, #ffffff, #f4f7ff);
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1.4rem;
   height: 100%;
-  box-shadow: 0 20px 45px rgba(0,0,0,.34);
+  box-shadow: 0 18px 35px rgba(16, 38, 88, 0.1);
 }
 
 .card-dark {
@@ -135,13 +136,13 @@ main {
 
 .card-dark:hover {
   transform: translateY(-4px);
-  border-color: #5b300f;
+  border-color: #95addf;
 }
 
 .kpi {
   text-align: center;
   border: 1px solid var(--border);
-  background: #0f0f0f;
+  background: #f8faff;
   border-radius: 14px;
   padding: 1rem;
 }
@@ -157,9 +158,9 @@ main {
   font-size: .78rem;
   border-radius: 999px;
   padding: .2rem .6rem;
-  border: 1px solid #5a3112;
-  color: #ffbf90;
-  background: rgba(255,122,0,.12);
+  border: 1px solid #afc3ef;
+  color: #163674;
+  background: rgba(19, 47, 107, 0.08);
 }
 
 .checklist {
@@ -172,7 +173,7 @@ main {
   position: relative;
   padding-left: 1.3rem;
   margin-bottom: .45rem;
-  color: #d7d7d7;
+  color: #2f416a;
 }
 
 .checklist li::before {
@@ -187,44 +188,46 @@ main {
 }
 
 .timeline-item {
-  border-left: 2px solid #50301a;
+  border-left: 2px solid #b2c6f0;
   padding-left: 1rem;
   margin-bottom: 1rem;
 }
 
 .form-control,
 .form-select {
-  background: #0f0f0f;
-  border: 1px solid #373737;
-  color: #fff;
+  background: #fff;
+  border: 1px solid #b7c8ed;
+  color: var(--text);
 }
 
 .form-control:focus,
 .form-select:focus {
-  background: #0f0f0f;
-  color: #fff;
+  background: #fff;
+  color: var(--text);
   border-color: var(--accent);
-  box-shadow: 0 0 0 .2rem rgba(255,122,0,.2);
+  box-shadow: 0 0 0 .2rem rgba(19, 47, 107, 0.16);
 }
 
 .form-label {
-  color: #e8e8e8;
+  color: #20345f;
   font-size: .92rem;
 }
 
 footer {
   border-top: 1px solid var(--border);
-  background: #050505;
-  color: #a2a2a2;
+  background: #f4f7ff;
+  color: #4f6391;
   padding: 1.5rem 0;
 }
 
 .small-note {
-  color: #a8a8a8;
+  color: #506493;
   font-size: .92rem;
 }
 
 .text-success-soft { color: var(--success); }
+
+.text-secondary { color: var(--muted) !important; }
 
 @media (max-width: 991px) {
   .hero { padding-top: 7.3rem; }
