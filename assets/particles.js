@@ -19,16 +19,16 @@
     return {
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.7,
-      vy: (Math.random() - 0.5) * 0.7,
-      r: Math.random() * 1.9 + 0.7
+      vx: (Math.random() - 0.5) * 0.38,
+      vy: (Math.random() - 0.5) * 0.38,
+      r: Math.random() * 1.6 + 0.6
     };
   }
 
   function resize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    const count = Math.max(80, Math.floor((canvas.width * canvas.height) / 21000));
+    const count = Math.max(65, Math.floor((canvas.width * canvas.height) / 28000));
     particles = Array.from({ length: count }, makeParticle);
   }
 
@@ -41,18 +41,18 @@
         const dy = pointer.y - p.y;
         const distance = Math.hypot(dx, dy) || 1;
 
-        if (distance < 260) {
-          const attract = (260 - distance) / 2600;
-          p.vx += (dx / distance) * attract + pointer.vx * 0.006;
-          p.vy += (dy / distance) * attract + pointer.vy * 0.006;
+        if (distance < 180) {
+          const attract = (180 - distance) / 4500;
+          p.vx += (dx / distance) * attract + pointer.vx * 0.0025;
+          p.vy += (dy / distance) * attract + pointer.vy * 0.0025;
         }
       }
 
       p.x += p.vx;
       p.y += p.vy;
 
-      p.vx *= 0.985;
-      p.vy *= 0.985;
+      p.vx *= 0.975;
+      p.vy *= 0.975;
 
       if (p.x <= 0 || p.x >= canvas.width) p.vx *= -1;
       if (p.y <= 0 || p.y >= canvas.height) p.vy *= -1;
@@ -61,7 +61,7 @@
       p.y = Math.max(0, Math.min(canvas.height, p.y));
 
       ctx.beginPath();
-      ctx.fillStyle = 'rgba(19,47,107,0.68)';
+      ctx.fillStyle = 'rgba(15, 40, 108, 0.55)';
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
       ctx.fill();
     });
@@ -71,8 +71,8 @@
         const a = particles[i];
         const b = particles[j];
         const d = Math.hypot(a.x - b.x, a.y - b.y);
-        if (d < 115) {
-          ctx.strokeStyle = `rgba(19,47,107,${(115 - d) / 640})`;
+        if (d < 100) {
+          ctx.strokeStyle = `rgba(15, 40, 108, ${(100 - d) / 760})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
