@@ -61,7 +61,7 @@
       p.y = Math.max(0, Math.min(canvas.height, p.y));
 
       ctx.beginPath();
-      ctx.fillStyle = 'rgba(255,122,0,0.75)';
+      ctx.fillStyle = 'rgba(19,47,107,0.68)';
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
       ctx.fill();
     });
@@ -72,7 +72,7 @@
         const b = particles[j];
         const d = Math.hypot(a.x - b.x, a.y - b.y);
         if (d < 115) {
-          ctx.strokeStyle = `rgba(255,255,255,${(115 - d) / 700})`;
+          ctx.strokeStyle = `rgba(19,47,107,${(115 - d) / 640})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
