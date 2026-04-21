@@ -6,6 +6,7 @@
   --navy: #1b3f98;
   --navy-dark: #132d70;
   --border: #d8e2fb;
+  --gold: #c5a247;
 }
 
 * { box-sizing: border-box; }
@@ -15,12 +16,13 @@ body {
   margin: 0;
   font-family: "Inter", "Segoe UI", system-ui, sans-serif;
   color: var(--text);
-  background: var(--bg);
+  background: radial-gradient(circle at top right, #f4f7ff, #fff 36%);
   line-height: 1.65;
 }
 
 .navbar {
-  background: #fff;
+  background: rgba(255,255,255,.93);
+  backdrop-filter: blur(7px);
   border-bottom: 1px solid var(--border);
   padding: .65rem 0;
 }
@@ -70,9 +72,7 @@ main { padding-top: 6.2rem; }
 }
 
 .lead,
-.section-subtitle {
-  color: var(--muted);
-}
+.section-subtitle { color: var(--muted); }
 
 .lead {
   font-size: clamp(1.02rem, 2vw, 1.2rem);
@@ -94,6 +94,7 @@ main { padding-top: 6.2rem; }
   border-radius: 16px;
   overflow: hidden;
   background: #fff;
+  box-shadow: 0 16px 44px rgba(20, 54, 130, .14);
 }
 
 .hero-image-wrap img,
@@ -107,9 +108,7 @@ main { padding-top: 6.2rem; }
 .hero-image-wrap img { max-height: 540px; }
 .profile-image img { max-height: 680px; }
 
-.section {
-  padding: clamp(2.2rem, 4vw, 3.6rem) 0;
-}
+.section { padding: clamp(2.2rem, 4vw, 3.6rem) 0; }
 
 .section-title {
   font-size: clamp(1.4rem, 3vw, 2.2rem);
@@ -118,7 +117,8 @@ main { padding-top: 6.2rem; }
 
 .card-box,
 .kpi,
-.cta-box {
+.cta-box,
+.classy-strip {
   border: 1px solid var(--border);
   border-radius: 14px;
   background: #fff;
@@ -147,9 +147,7 @@ main { padding-top: 6.2rem; }
   padding: 0;
   margin: 0;
 }
-.checklist { list-style: none; padding-left: 0; margin-bottom: 0; }
 
-.checklist { list-style: none; padding: 0; margin: 0; }
 .checklist li {
   position: relative;
   padding-left: 1.25rem;
@@ -206,6 +204,15 @@ main { padding-top: 6.2rem; }
   background: #f7faff;
 }
 
+.classy-strip {
+  padding: 1.2rem;
+  background: linear-gradient(115deg, #0f2460, #214db6);
+  color: #fff;
+}
+
+.classy-strip p { margin: 0; color: #dce6ff; }
+.classy-strip strong { color: #fff; font-weight: 700; }
+
 .form-label { color: #20345f; font-size: .92rem; }
 
 footer {
@@ -213,7 +220,23 @@ footer {
   border-top: 1px solid var(--border);
   background: #f8faff;
   color: #576a99;
-  padding: 1.4rem 0;
+  padding: 1.8rem 0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: var(--navy);
+  font-weight: 600;
+  border: 1px solid #c4d2f8;
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  background: #fff;
 }
 
 @media (max-width: 991px) {

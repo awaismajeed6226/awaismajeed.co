@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-label="Awais Majeed portrait placeholder">
+  <rect width="900" height="1200" fill="#f1f3f7"/>
+  <ellipse cx="450" cy="1140" rx="250" ry="48" fill="#d9deea"/>
+  <path d="M260 1180 L640 1180 L595 700 L305 700 Z" fill="#1e366d"/>
+  <path d="M330 720 L570 720 L540 1090 L360 1090 Z" fill="#203f7e"/>
+  <path d="M390 700 L510 700 L485 1060 L415 1060 Z" fill="#f5f8ff"/>
+  <rect x="385" y="660" width="130" height="75" rx="22" fill="#f1cfb5"/>
+  <ellipse cx="450" cy="530" rx="125" ry="140" fill="#f1cfb5"/>
+  <path d="M330 510 C340 390 420 340 510 360 C560 372 590 420 575 520 C530 470 450 455 330 510 Z" fill="#111827"/>
+  <rect x="360" y="520" width="72" height="26" rx="13" fill="none" stroke="#8fa2c9" stroke-width="6"/>
+  <rect x="468" y="520" width="72" height="26" rx="13" fill="none" stroke="#8fa2c9" stroke-width="6"/>
+  <line x1="432" y1="533" x2="468" y2="533" stroke="#8fa2c9" stroke-width="5"/>
+  <path d="M415 605 C430 615 470 615 485 605" fill="none" stroke="#8c5e4b" stroke-width="6" stroke-linecap="round"/>
+  <path d="M388 730 L512 730 L450 835 Z" fill="#e8edf7"/>
+  <circle cx="450" cy="896" r="13" fill="#284a8f"/>
+  <circle cx="450" cy="952" r="13" fill="#284a8f"/>
+  <circle cx="450" cy="1008" r="13" fill="#284a8f"/>
+</svg>
